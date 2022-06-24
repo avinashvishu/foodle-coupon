@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Foodle!</title>
+    <link rel="icon" href="https://i.ibb.co/JRybkMW/logo.png">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/6d653f524a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <center>
+        <div id="coupon" class="container-md">
+            <button style="float: right;" onclick="closecoupon()">&times;</button>
+        </div>
+    </center>
+    <header>
+        <nav class="navbar navbar-danger bg-danger">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://i.ibb.co/JRybkMW/logo.png" alt="" width="40" height="34" class="d-inline-block align-text-top"> <span class="me-5 " style="color: whitesmoke;font-size: 26px;">Foodle!</span>
+                    <button type="button" class="btn btn-primary "><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>
+                    <button type="button" class="btn btn-info"><i class="fa-solid fa-plus"></i> Sign</button>
+
+                </a>
+                <div id="containe">
+                    <label class="switch">
+                      <input type="checkbox" onclick="changeMode()">
+                      <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+        <!-- <div id="heading"> 
+            <span id="title">Foodle!<img src="https://i.ibb.co/JRybkMW/logo.png" alt="logo"></span>
+            <div id="button">
+                <button class="button1">Login</button>
+                <button class="button2">Sign up</button>
+            </div>
+
+        </div>-->
+    </header>
+
+    <div id="main_search">
+        <p class="h1" id="text">Foodle your meal here !</p>
+        <div class="logo"></div>
+        <div class="dropdown">
+            <select> 
+                <option>-------PLEASE SELECT CITY-------</option>
+                <option>Jamshedpur</option>
+                <option>Ranchi</option>
+                <option>Hazaribagh</option>
+            </select>
+            <select class="restro">
+                <option>-------PLEASE SELECT RESTUARANTS-------</option>
+                <option>HIGH SKY</option>
+                <option>THE BEST</option>
+                <option>MOTI MAHAL</option>
+                <option>CHAI BREAK</option>
+                <option>ZOHAAR</option>
+                <option>MADHUBAN RESORT</option>
+                <option>JAM STREET</option>
+                <option>DOSA PLAZA</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="Quick_search">
+        <div><span id="quick_heading">Quick Search</span>
+            <span id="quick_subheading">Discover Restuarents By Meal </span>
+        </div>
+
+        <div class="container">
+            <!-- <div class="background"> -->
+            <!-- <img src="images/logo.png" alt="logo"> -->
+            <!-- </div> -->
+            <div class="sub_container" id="container">
+                <div class="meal_images">
+                    <img src="https://i.ibb.co/Pw1HSCh/breakfast.jpg" alt="breakfast">
+                </div>
+                <div class="meal_text">
+                    <div class="main_text">
+                        <a href="listing/listing.html">
+                            <span class="conthead">BREAKFAST</span>
+                        </a>
+                    </div>
+                    <div class="sub_text">All happiness depends on a leisurely breakfast.</div>
+                </div>
+            </div>
+            <div class="sub_container" id="container">
+                <div class="meal_images">
+                    <img src="https://i.ibb.co/WGr5q3B/lunch.jpg" alt="lunch">
+                </div>
+                <div class="meal_text">
+                    <div class="main_text">
+                        <a href="listing/listing.html">
+                            <span class="conthead">LUNCH</span>
+                        </a>
+                    </div>
+                    <div class="sub_text">Nothing brings people together like good food.</div>
+                </div>
+            </div>
+            <div class="sub_container" id="container">
+                <div class="meal_images">
+                    <img src="https://i.ibb.co/qnvPRhg/dinner.jpg" alt="dinner">
+                </div>
+                <div class="meal_text">
+                    <div class="main_text">
+                        <a href="listing/listing.html">
+                            <span class="conthead">DINNER</span>
+                        </a>
+                    </div>
+                    <div class="sub_text">Dinner is better when we eat together.</div>
+                </div>
+            </div>
+            <div class="sub_container" id="container">
+                <div class="meal_images">
+                    <img src="https://i.ibb.co/SrmbQmt/exotic-pizza.jpg" alt="pizza">
+                </div>
+                <div class="meal_text">
+                    <div class="main_text">
+                        <a href="listing/listing.html">
+                            <span class="conthead">EXOTIC PIZZA</span>
+                        </a>
+                    </div>
+                    <div class="sub_text">The perfect lover is one who turns into a pizza at 4:00 A.M.</div>
+                </div>
+            </div>
+            <div class="sub_container" id="container">
+                <div class="meal_images">
+                    <img src="https://i.ibb.co/BfmSnvb/snacks.jpg" alt="snacks">
+                </div>
+                <div class="meal_text">
+                    <div class="main_text">
+                        <a href="listing/listing.html">
+                            <span class="conthead">SNACKS</span>
+                    </div>
+                    <div class="sub_text">Snack time heals all wounds.</div>
+                </div>
+            </div>
+            <div class="sub_container" id="container">
+                <div class="meal_images">
+                    <img src="https://i.ibb.co/SvTZ3sv/south-indian.jpg" alt="south indian">
+                </div>
+                <div class="meal_text">
+                    <div class="main_text">
+                        <a href="listing/listing.html">
+                            <span class="conthead">SOUTH INDIAN</span>
+                        </a>
+                    </div>
+                    <div class="sub_text">From the south to your mouth.</div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <hr />
+    <footer>
+        <div class="info">
+
+            <h4>About us-</h4>
+
+            <p class="info_text1">Foodle is an Indian multinational restaurant aggregator and food delivery company founded by Avinash Vishu in 2022. Foodle provides information, menus and user-reviews of restaurants as well as food delivery options from partner restaurants
+                in select cities.
+            </p>
+
+
+        </div>
+        <div id="contact">
+            <div id="contact_heading">
+                <p>
+                    &copy; Avinash Vishu
+                </p>
+            </div>
+            <div id="social_footer">
+                <a class="social_footer" href="https://www.linkedin.com/in/avinash-vishu-22b4741b0/" target="_blank">
+                    <img src="https://i.ibb.co/frrMTvx/linkedin-logo-white.png" a alt="linkedin icon" title="linkedin" width="30px">
+                </a>
+                <a class="social_footer" href="https://www.facebook.com/profile.php?id=100009499706610" target="_blank">
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-facebook_tfqsuc" alt="facebook icon" title="Facebook" width="30px">
+                </a>
+                <a class="social_footer" href="https://www.instagram.com/avinash___vishu_09/?utm_medium=copy_link" target="_blank">
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-instagram_b7nubh" alt="instagram icon" title="Instagram" width="30px">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+    <hr />
+    <script>
+        window.onload = loadcoupon()
+
+        function changeMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+        function closecoupon() {
+            document.getElementById('coupon').style.visibility = 'hidden'
+        }
+
+        function loadcoupon() {
+            document.getElementById('coupon').style.visibility = 'visible'
+        }
+    </script>
+
+</body>
+
+</html>
