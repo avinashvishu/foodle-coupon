@@ -20,7 +20,7 @@
         </div>
     </center>
     <header>
-        <nav class="navbar navbar-danger bg-danger">
+        <nav class="navbar bg-danger" id="nav-bar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img src="https://i.ibb.co/JRybkMW/logo.png" alt="" width="40" height="34" class="d-inline-block align-text-top"> <span class="me-5 " style="color: whitesmoke;font-size: 26px;">Foodle!</span>
@@ -199,6 +199,12 @@
         function changeMode() {
             var element = document.body;
             element.classList.toggle("dark-mode");
+            var nav_class = document.getElementById("nav-bar");
+            if (nav_class.className === "navbar bg-danger") {
+                nav_class.className = "navbar bg-dark";
+            } else {
+                nav_class.className = "navbar bg-danger";
+            }
         }
 
         function closecoupon() {
