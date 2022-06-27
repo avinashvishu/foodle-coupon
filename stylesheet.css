@@ -93,7 +93,8 @@ input:checked+.slider::before {
     float: right;
 }
 
-.button1 {
+
+/* .button1 {
     height: 25px;
     float: right;
     display: inline;
@@ -149,7 +150,7 @@ input:checked+.slider::before {
     background-color: #ff3b34;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} */
 
 a {
     text-decoration: none;
@@ -749,7 +750,7 @@ h4 {
         width: 90%;
     }
     footer {
-        height: 119px;
+        height: 180px;
     }
     #contact_heading>p {
         font-size: 24px;

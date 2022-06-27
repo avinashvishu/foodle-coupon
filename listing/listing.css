@@ -3,6 +3,81 @@ body {
     background-color: #d9d8d9;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background: #b892ff;
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.dark-mode {
+    background: #141315;
+}
+
+.dark-mode #heading1 {
+    color: #999999;
+}
+
+.dark-mode #content {
+    background-color: hsl(0deg 11% 13% / 28%);
+}
+
+.dark-mode #filter {
+    background-color: hsl(0deg 11% 13% / 28%);
+}
+
+.dark-mode #filter>h2 {
+    color: #796a6af8;
+}
+
+.dark-mode .dark {
+    color: #999999;
+}
+
+.dark-mode .list-items {
+    background-color: #141315;
+}
+
 
 /* heading part of the website */
 
@@ -29,7 +104,8 @@ body {
     margin-top: 1%;
 }
 
-#button {
+
+/* #button {
     height: 40px;
     width: 30%;
     float: right;
@@ -87,7 +163,7 @@ body {
     background-color: #ff3b34;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} */
 
 a {
     text-decoration: none;
@@ -119,6 +195,10 @@ h2 {
     border-radius: 3%;
 }
 
+.check {
+    display: block;
+}
+
 #content {
     height: 600px;
     width: 64%;
@@ -129,6 +209,10 @@ h2 {
     background-color: #eeededf2;
     border-radius: 1%;
     overflow: scroll;
+}
+
+#content::-webkit-scrollbar {
+    display: none;
 }
 
 .list-items {
@@ -160,14 +244,14 @@ h2 {
 }
 
 .specs {
-    margin-left: 2px;
+    margin-left: 5px;
 }
 
 
 /*footer part*/
 
 footer {
-    height: 80px;
+    height: 90px;
     width: 100%;
     background-color: #000000;
 }
@@ -411,7 +495,7 @@ h4 {
     }
     #content {
         height: 396px;
-        width: 70%;
+        width: 67%;
         margin-right: 0px;
     }
     footer {
@@ -455,6 +539,9 @@ h4 {
     h4 {
         margin-left: 12px;
     }
+    #filter {
+        width: 28%;
+    }
 }
 
 @media (max-width:400px) {
@@ -462,7 +549,7 @@ h4 {
         padding: 5px 15px;
     }
     footer {
-        height: 121px;
+        height: 177px;
     }
     #contact_heading>p {
         font-size: 24px;

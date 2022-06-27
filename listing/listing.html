@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodle!</title>
     <link rel="icon" href="https://i.ibb.co/JRybkMW/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="listing.css">
     <link rel="icons" href="https://fontawesome.com/icons/star?s=thin">
     <script src="https://kit.fontawesome.com/6d653f524a.js" crossorigin="anonymous"></script>
@@ -14,32 +15,40 @@
 
 <body>
     <header>
-        <div id="heading">
-            <a href="/index.html"><span id="title"> Foodle!<img src="https://i.ibb.co/JRybkMW/logo.png" alt="logo"></span></a>
-            <div id="button">
-                <button class="button1">Login</button>
-                <button class="button2">Sign up</button>
-            </div>
+        <nav class="navbar bg-danger" id="nav-bar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="https://i.ibb.co/JRybkMW/logo.png" alt="" width="40" height="34" class="d-inline-block align-text-top"> <span class="me-5 " style="color: whitesmoke;font-size: 26px;">Foodle!</span>
+                    <button type="button" class="btn btn-outline-light"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>
+                    <button type="button" class="btn btn-outline-info"><i class="fa-solid fa-plus"></i> Sign</button>
 
-        </div>
+                </a>
+                <div id="containe">
+                    <label class="switch">
+                      <input type="checkbox" onclick="changeMode()">
+                      <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
     </header>
     <h1 id="heading1">List-Items</h1>
     <div id="container">
         <div id="filter">
             <h2>Filter</h2>
             <hr>
-            <input type="checkbox">breakfast
-            <input type="checkbox">dinner
-            <input type="checkbox">lunch
-            <input type="checkbox">snacks
-            <input type="checkbox">drinks
+            <span class="dark check"><input type="checkbox">breakfast</span>
+            <span class="dark check"><input type="checkbox">dinner</span>
+            <span class="dark check"><input type="checkbox">lunch</span>
+            <span class="dark check"><input type="checkbox">snacks</span>
+            <span class="dark check"><input type="checkbox">drinks</span>
             <hr>
             <h2>Price range</h2>
-            <input type="radio">100&#8377;-200&#8377;<br>
-            <input type="radio">200&#8377;-500&#8377;<br>
-            <input type="radio">500&#8377;-800&#8377;<br>
-            <input type="radio">800&#8377;-1000&#8377;<br>
-            <input type="radio">1500&#8377;-2000&#8377;<br>
+            <span class="dark"><input type="radio" name="price">100&#8377;-200&#8377;<br></span>
+            <span class="dark"><input type="radio" name="price">200&#8377;-500&#8377;<br></span>
+            <span class="dark"><input type="radio" name="price">500&#8377;-800&#8377;<br></span>
+            <span class="dark"><input type="radio" name="price">800&#8377;-1000&#8377;<br></span>
+            <span class="dark"><input type="radio" name="price">1500&#8377;-2000&#8377;<br></span>
         </div>
         <div id="content">
             <a href="/details/details.html">
@@ -49,15 +58,15 @@
                         <img src="https://i.travelapi.com/hotels/1000000/490000/487100/487013/1839913a_z.jpg" alt="The Best">
                     </div>
                     <div class="del">
-                        <h1 class="specs">The Best</h1>
-                        <p class="specs">Chinese, North Indian, South Indian</p>
-                        <p class="specs">Lalpur, Ranchi</p>
+                        <h1 class="specs dark">The Best</h1>
+                        <p class="specs dark">Chinese, North Indian, South Indian</p>
+                        <p class="specs dark">Lalpur, Ranchi</p>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
-                        <span>5.0 stars</span>
+                        <span class="dark">5.0 stars</span>
                     </div>
                 </div>
             </a>
@@ -68,15 +77,15 @@
                         <img src="https://i.ibb.co/P9sjqz4/unnamed.png" alt="Sky high">
                     </div>
                     <div class="del">
-                        <h1 class="specs">High Sky Cafe And Restaurant</h1>
-                        <p class="specs">Chinese, South Indian</p>
-                        <p class="specs">Telco Colony, Jamshedpur</p>
+                        <h1 class="specs dark">High Sky Cafe And Restaurant</h1>
+                        <p class="specs dark">Chinese, South Indian</p>
+                        <p class="specs dark">Telco Colony, Jamshedpur</p>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star-half-stroke" style="color: orange;"></i>
-                        <span>4.5 stars</span>
+                        <span class="dark">4.5 stars</span>
                     </div>
                 </div>
             </a>
@@ -88,15 +97,15 @@
                         <img src="https://i.ibb.co/fxgX09M/516477-sld.jpg" alt="Gyaani Restaurant">
                     </div>
                     <div class="del">
-                        <h1 class="specs">Gyaani Restaurant</h1>
-                        <p class="specs">Chinese, North Indian, South Indian</p>
-                        <p class="specs">Telco Colony, Jamshedpur</p>
+                        <h1 class="specs dark">Gyaani Restaurant</h1>
+                        <p class="specs dark">Chinese, North Indian, South Indian</p>
+                        <p class="specs dark">Telco Colony, Jamshedpur</p>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star"></i>
-                        <span>4.0 stars</span>
+                        <span class="dark">4.0 stars</span>
                     </div>
                 </div>
             </a>
@@ -107,15 +116,15 @@
                         <img src="https://i.ibb.co/QKkqfjh/feat-IDAS.jpg" alt="Social 75">
                     </div>
                     <div class="del">
-                        <h1 class="specs">Social 75</h1>
-                        <p class="specs">North Indian, Cocktail, Mocktails</p>
-                        <p class="specs">Howarha Bridge , Jamshedpur</p>
+                        <h1 class="specs dark">Social 75</h1>
+                        <p class="specs dark">North Indian, Cocktail, Mocktails</p>
+                        <p class="specs dark">Howarha Bridge , Jamshedpur</p>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star"></i>
-                        <span>4.0 stars</span>
+                        <span class="dark">4.0 stars</span>
                     </div>
                 </div>
             </a>
@@ -126,15 +135,15 @@
                         <img src="https://cdn.archilovers.com/projects/233a1c6f-f4db-4549-9f87-6f3ed73a1021.jpg " alt="The chai break cafe&bar ">
                     </div>
                     <div class="del ">
-                        <h1 class="specs ">The chai break cafe&bar</h1>
-                        <p class="specs ">Chinese, North Indian</p>
-                        <p class="specs ">bistapur, Jamshedpur</p>
+                        <h1 class="specs dark ">The chai break cafe&bar</h1>
+                        <p class="specs dark ">Chinese, North Indian</p>
+                        <p class="specs dark ">bistapur, Jamshedpur</p>
                         <i class="fa-solid fa-star " style="color: orange; "></i>
                         <i class="fa-solid fa-star " style="color: orange; "></i>
                         <i class="fa-solid fa-star " style="color: orange; "></i>
                         <i class="fa-solid fa-star "></i>
                         <i class="fa-solid fa-star "></i>
-                        <span>3.0 stars</span>
+                        <span class="dark">3.0 stars</span>
                     </div>
                 </div>
             </a>
@@ -145,15 +154,15 @@
                         <img src="https://i.ibb.co/dJ3h5MJ/download-1.jpg" alt="Star Beans">
                     </div>
                     <div class="del">
-                        <h1 class="specs">Star Beans</h1>
-                        <p class="specs">Chinese, Cake, Shakes</p>
-                        <p class="specs">Telco Colony, Jamshedpur</p>
+                        <h1 class="specs dark">Star Beans</h1>
+                        <p class="specs dark">Chinese, Cake, Shakes</p>
+                        <p class="specs dark">Telco Colony, Jamshedpur</p>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star" style="color: orange;"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <span>2.0 stars</span>
+                        <span class="dark">2.0 stars</span>
                     </div>
                 </div>
             </a>
@@ -192,7 +201,18 @@
         </div>
     </footer>
     <hr />
-
+    <script>
+        function changeMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            var nav_class = document.getElementById("nav-bar");
+            if (nav_class.className === "navbar bg-danger") {
+                nav_class.className = "navbar bg-dark";
+            } else {
+                nav_class.className = "navbar bg-danger";
+            }
+        }
+    </script>
 </body>
 
 </html>
