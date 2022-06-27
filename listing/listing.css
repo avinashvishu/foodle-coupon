@@ -542,10 +542,13 @@ h4 {
     #filter {
         width: 28%;
     }
+    .list-items {
+        height: 180px;
+    }
 }
 
 @media (max-width:400px) {
-    bo .button2 {
+    button2 {
         padding: 5px 15px;
     }
     footer {
