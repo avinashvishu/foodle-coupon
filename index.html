@@ -10,6 +10,10 @@
     <link rel="icon" href="https://i.ibb.co/JRybkMW/logo.png">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="https://kit.fontawesome.com/6d653f524a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- <script src="/location.js"></script> -->
 
 </head>
 
@@ -21,13 +25,18 @@
     </center>
     <header>
         <nav class="navbar bg-danger" id="nav-bar">
-            <div class="container-fluid">
+            <div class="container-fluid" id="nav-con">
                 <a class="navbar-brand" href="index.html">
                     <img src="https://i.ibb.co/JRybkMW/logo.png" alt="" width="40" height="34" class="d-inline-block align-text-top"> <span class="me-5 " style="color: whitesmoke;font-size: 26px;">Foodle!</span>
-                    <button type="button" class="btn btn-outline-light"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>
-                    <button type="button" class="btn btn-outline-info"><i class="fa-solid fa-plus"></i> Sign</button>
-
                 </a>
+
+                <ul class="list-btn">
+                    <li><button type="button" class="btn btn-outline-light"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button></li>
+                    <li><button type="button" class="btn btn-outline-info"><i class="fa-solid fa-plus"></i> Sign</button></li>
+                    <li>
+                        <div><button class="btn btn-outline-warning" onclick="getlocation()"><i class="fa-solid fa-location-dot"></i><span id="locate"> YOUR LOCATION</span></button></div>
+                    </li>
+                </ul>
                 <div id="containe">
                     <label class="switch">
                       <input type="checkbox" onclick="changeMode()">
@@ -50,22 +59,22 @@
         <p class="h1" id="text">Foodle your meal here !</p>
         <div class="logo"></div>
         <div class="dropdown">
-            <select> 
-                <option>-------PLEASE SELECT CITY-------</option>
+            <select class="form-select" aria-label="Select City"> 
+                <option>PLEASE SELECT CITY</option>
                 <option>Jamshedpur</option>
                 <option>Ranchi</option>
                 <option>Hazaribagh</option>
             </select>
-            <select class="restro">
-                <option>-------PLEASE SELECT RESTUARANTS-------</option>
-                <option>HIGH SKY</option>
-                <option>THE BEST</option>
-                <option>MOTI MAHAL</option>
-                <option>CHAI BREAK</option>
-                <option>ZOHAAR</option>
-                <option>MADHUBAN RESORT</option>
-                <option>JAM STREET</option>
-                <option>DOSA PLAZA</option>
+            <select class="restro form-select" aria-label="Select Restro">
+            <option>PLEASE SELECT RESTUARANTS</option>
+            <option>HIGH SKY</option>
+            <option>THE BEST</option>
+            <option>MOTI MAHAL</option>
+            <option>CHAI BREAK</option>
+            <option>ZOHAAR</option>
+            <option>MADHUBAN RESORT</option>
+            <option>JAM STREET</option>
+            <option>DOSA PLAZA</option>
             </select>
         </div>
     </div>
@@ -213,6 +222,33 @@
 
         function loadcoupon() {
             document.getElementById('coupon').style.visibility = 'visible'
+        }
+        let x = document.getElementById('locate');
+
+        function getlocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition)
+            } else {
+                x.innerText = "Geo not supported"
+            }
+
+            function showPosition(data) {
+                console.log(data)
+                let latitude = data.coords.latitude;
+                let longitude = data.coords.longitude;
+                const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${latitude}&lon=${longitude}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+                fetch(url, {
+                        method: 'GET'
+                    })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data)
+                        let cityName = data.city.name
+                        x.innerText = ` ${cityName}`;
+                    })
+
+
+            }
         }
     </script>
 
