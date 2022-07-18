@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@1,700&display=swap" rel="stylesheet">
+    <script src="dynamic.js"></script>
     <!-- <script src="/location.js"></script> -->
 
 </head>
@@ -59,22 +60,22 @@
         <p class="h1" id="text">Foodle your meal here !</p>
         <div class="logo"></div>
         <div class="dropdown">
-            <select class="form-select" aria-label="Select City"> 
+            <select id="city" class="form-select" aria-label="Select City" onchange="getRest()"> 
                 <option>PLEASE SELECT CITY</option>
-                <option>Jamshedpur</option>
+                <!-- <option>Jamshedpur</option>
                 <option>Ranchi</option>
-                <option>Hazaribagh</option>
+                <option>Hazaribagh</option> -->
             </select>
-            <select class="restro form-select" aria-label="Select Restro">
+            <select id="rest-select" class="restro form-select" aria-label="Select Restro">
             <option>PLEASE SELECT RESTUARANTS</option>
-            <option>HIGH SKY</option>
+            <!-- <option>HIGH SKY</option>
             <option>THE BEST</option>
             <option>MOTI MAHAL</option>
             <option>CHAI BREAK</option>
             <option>ZOHAAR</option>
             <option>MADHUBAN RESORT</option>
             <option>JAM STREET</option>
-            <option>DOSA PLAZA</option>
+            <option>DOSA PLAZA</option> -->
             </select>
         </div>
     </div>
@@ -204,6 +205,7 @@
     <hr />
     <script>
         window.onload = loadcoupon()
+        window.onload = getCity()
 
         function changeMode() {
             var element = document.body;
@@ -251,7 +253,6 @@
             }
         }
     </script>
-
 </body>
 
 </html>
